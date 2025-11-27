@@ -1,0 +1,10 @@
+[project]
+name = "tokyo_python_bowling_challenge"
+version = "0.1.0"
+description = "Spare me the excuses - 60 Minutes to knock this challenge over"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = []
