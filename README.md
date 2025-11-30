@@ -21,7 +21,7 @@ Branches:
 - **Spare /**: 10 pins over 2 rolls (e.g., "6/" = 6+4).
 - **Strike X**: 10 on first roll ("X").
 - **Score**: Pins + bonuses (next roll for spare, next two for strike).
-- **10th Frame**: Up to 3 rolls if strike/spare.
+- **10^th^ Frame**: Up to 3 rolls if strike/spare.
 
 ## Setup
 
@@ -58,8 +58,8 @@ Example test output:
 ```python
 from score_card import pins_knocked_over
 
-scorecard = "9- X 71 6/ 5- 8/ X 7- 3/ X"
-print(pins_knocked_over(scorecard))  # 81 (easy)
+scorecard = "9- X 71 6/ 5- 8/ X 7- 3/ X81"
+print(pins_knocked_over(scorecard))  # 98 (easy)
 
 # For hard (in challenge branch):
 from bowling import full_score
