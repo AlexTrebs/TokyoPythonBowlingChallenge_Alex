@@ -48,7 +48,7 @@ If you don't have `uv` then visit
 Switch to your branch (`git checkout easy` or `challenge`), implement, then:
 
 ```
-uv run tests
+uv run tests.py
 ```
 
 Example test output:
