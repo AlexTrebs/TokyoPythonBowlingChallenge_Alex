@@ -1,8 +1,9 @@
 from functools import partial
 
 from data_for_tests import TEST_CARDS
+from data_for_tests import CHALLENGE_TEST_CARDS
 from score_card import pins_knocked_over
-
+from score_card import full_score
 
 def in_colour(text: str, colour: int) -> str:
     return f"\033[{colour}m{text}\033[0m"
@@ -11,10 +12,9 @@ def in_colour(text: str, colour: int) -> str:
 in_green = partial(in_colour, colour=32)
 in_red = partial(in_colour, colour=31)
 
-
-def run_tests(func_to_test):
+def run_tests(func_to_test, cards):
     passed_tests = 0
-    for test_num, (card, pins) in enumerate(TEST_CARDS.items(), start=passed_tests + 1):
+    for test_num, (card, pins) in enumerate(cards.items(), start=passed_tests + 1):
         try:
             returned = func_to_test(card)
             assert returned == pins
@@ -34,4 +34,5 @@ def run_tests(func_to_test):
 
 
 if __name__ == "__main__":
-    run_tests(pins_knocked_over)
+    run_tests(pins_knocked_over, TEST_CARDS)
+    run_tests(full_score, CHALLENGE_TEST_CARDS)
